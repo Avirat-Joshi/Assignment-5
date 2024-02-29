@@ -3,30 +3,55 @@ void main()
 {
     int s = 0, a;
     char ch;
-    printf("Enter a number ");
+    printf("Provide the number ");
     scanf("%d", &a);
     if (a % 2 == 0)
         s += a;
-    while (1)
+    for (int i = 0;; i++)
     {
-        printf("\nDo you want to continue? ");
+        printf("Do you want to continue ");
         getchar();
         scanf("%c", &ch);
-        if (ch == 'N' || ch == 'n')
+        if (ch == 'Y' || ch == 'y')
         {
-            printf("Sum is %d", s);
-            break;
-        }
-        else if (ch == 'Y' || ch == 'y')
-        {
-            printf("Enter a number ");
+            printf("Provide the number ");
             scanf("%d", &a);
             if (a % 2 == 0)
                 s += a;
+            continue;
         }
+        if (ch == 'N' || ch == 'n')
+            break;
         else
-        {
-            printf("Invalid input, please retry");
-        }
+            printf("Not a valid input");
     }
+    printf("The sum is: %d", s);
 }
+
+
+
+
+
+
+
+// while (1)
+// {
+//     printf("\nDo you want to continue? ");
+//     getchar();
+//     scanf("%c", &ch);
+//     if (ch == 'N' || ch == 'n')
+//     {
+//         printf("Sum is %d", s);
+//         break;
+//     }
+//     else if (ch == 'Y' || ch == 'y')
+//     {
+//         printf("Enter a number ");
+//         scanf("%d", &a);
+//         if (a % 2 == 0)
+//             s += a;
+//     }
+//     else
+//     {
+//         printf("Invalid input, please retry");
+//     }
